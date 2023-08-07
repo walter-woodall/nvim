@@ -2,6 +2,11 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
         "hrsh7th/cmp-emoji",
+        {
+            "Saecki/crates.nvim",
+            event = { "BufRead Cargo.toml" },
+            config = true,
+        },
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
@@ -38,5 +43,9 @@ return {
                 end
             end, { "i", "s" }),
         })
+
+        opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
+            { name = "crates" },
+        }))
     end,
 }
