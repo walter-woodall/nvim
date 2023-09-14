@@ -1,0 +1,3 @@
+return {
+  "dijkstracula/vim-plang",
+}
