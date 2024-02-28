@@ -10,8 +10,10 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
   },
+  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
+  { "rebelot/kanagawa.nvim", priority = 1000, lazy = false },
 
   -- Configure LazyVim to load gruvbox
   {
