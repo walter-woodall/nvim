@@ -1,7 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     opts = {
-        autoformat = true,
+        autoformat = false,
         servers = {
             rust_analyzer = {},
             jdtls = {},
