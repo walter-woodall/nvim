@@ -9,5 +9,10 @@ return {
             },
             jdtls = {},
         },
+        setup = {
+            jdtls = function ()
+                return true
+            end,
+        },
     },
 }
