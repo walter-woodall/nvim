@@ -13,9 +13,17 @@ function bemol()
     end
 
     for _, line in ipairs(ws_folders_lsp) do
+        vim.notify(string.format("Adding workspace folder to LSP: %s", line))
         vim.lsp.buf.add_workspace_folder(line)
     end
 
 end
 
-bemol()
+return {
+  "mfussenegger/nvim-jdtls",
+    opts = {
+        on_attach = function ()
+            bemol()
+        end
+    }
+}
