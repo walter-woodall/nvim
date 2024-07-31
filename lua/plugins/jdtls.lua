@@ -72,6 +72,9 @@ return {
             test = true,
             settings = {
                 java = {
+                    edit = {
+                        validateAllOpenBuffersOnChanges = false,
+                    }
                     inlayHints = {
                         parameterNames = {
                             enabled = "all",
