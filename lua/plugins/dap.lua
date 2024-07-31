@@ -6,7 +6,6 @@ dap.configurations.java = {
         name = "Debug (Attach) - Remote";
         hostName = "127.0.0.1";
         port = 8787;
-        projectName = "BigBirdStorageNode";
     },
 }
 return {
@@ -16,7 +15,7 @@ return {
             "williamboman/mason.nvim",
             opts = function(_, opts)
                 opts.ensure_installed = opts.ensure_installed or {}
-                vim.list_extend(opts.ensure_installed, { "java-test", "java-debug-adapter" })
+                vim.list_extend(opts.ensure_installed, { "codelldb", "java-test", "java-debug-adapter" })
             end,
         },
     },
