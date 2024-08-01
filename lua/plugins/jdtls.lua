@@ -74,7 +74,7 @@ return {
                 java = {
                     edit = {
                         validateAllOpenBuffersOnChanges = false,
-                    }
+                    },
                     inlayHints = {
                         parameterNames = {
                             enabled = "all",
