@@ -47,8 +47,10 @@ return {
             -- if the Python wrapper script doesn't suffice.
             cmd = {
                 vim.fn.exepath("jdtls"),
+                "--jvm-arg=-Xms2G",
+                "--jvm-arg=-Xmx8G",
+                "--jvm-arg=-XX:+UseG1GC",
                 string.format("--jvm-arg=-javaagent:%s", lombok_jar),
-                "--jvm-arg=-Xms8g",
             },
             full_cmd = function(opts)
                 local fname = vim.api.nvim_buf_get_name(0)
