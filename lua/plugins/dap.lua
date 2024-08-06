@@ -3,8 +3,16 @@ dap.configurations.java = {
     {
         type = 'java';
         request = 'attach';
-        name = "Debug (Attach) - Remote";
+        name = "Remote Debug (Attach)";
         hostName = "127.0.0.1";
+        port = 8787;
+    },
+    {
+        type = 'java';
+        request = 'attach';
+        name = "Remote Debug (Attach) - BigBirdStorageNode";
+        hostName = "127.0.0.1";
+        projectName = "BigBirdStorageNode";
         port = 8787;
     },
 }
