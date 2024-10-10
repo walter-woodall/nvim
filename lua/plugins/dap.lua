@@ -15,6 +15,14 @@ dap.configurations.java = {
         projectName = "BigBirdStorageNode";
         port = 8787;
     },
+    {
+        type = 'java';
+        request = 'attach';
+        name = "Remote Debug (Attach) - SaddleJavaClient";
+        hostName = "127.0.0.1";
+        projectName = "SaddleJavaClient";
+        port = 8787;
+    },
 }
 return {
     "mfussenegger/nvim-dap",
