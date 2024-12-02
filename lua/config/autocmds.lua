@@ -4,8 +4,8 @@
 
 -- Disable autoformat for java files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "java" },
-  callback = function()
-    vim.b.autoformat = false
-  end,
+    pattern = { "java" },
+    callback = function()
+        vim.b.autoformat = false
+    end,
 })
