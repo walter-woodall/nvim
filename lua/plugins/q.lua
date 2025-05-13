@@ -5,10 +5,5 @@ return {
         opts = {
             ssoStartUrl = 'https://amzn.awsapps.com/start',
         },
-        config = function()
-            require('amazonq').setup({
-                ssoStartUrl = 'https://amzn.awsapps.com/start',
-            })
-        end,
     },
 }
