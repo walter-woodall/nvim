@@ -14,6 +14,10 @@ return {
             end
         end
 
+        for _, line in ipairs(workspaces) do
+            vim.lsp.buf.add_workspace_folder(line)
+        end
+
         local project_name = opts.project_name(root_dir)
         local cmd = vim.deepcopy(opts.cmd)
         if project_name then
@@ -29,9 +33,6 @@ return {
             cmd = cmd,
             init_options = {
                 workspaceFolders = workspaces,
-            },
-            extendedClientCapabilities = {
-                symbolInWorkspaceSupport = true,
             },
             root_dir = root_dir,
         }
