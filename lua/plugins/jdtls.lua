@@ -26,6 +26,11 @@ return {
                 opts.jdtls_config_dir(project_name),
                 "-data",
                 opts.jdtls_workspace_dir(project_name),
+                -- Memory optimization
+                "-Xms2g",
+                "-Xmx8g",
+                "-XX:+UseG1GC",
+                "-XX:+UseStringDeduplication",
             })
         end
 
@@ -33,6 +38,31 @@ return {
             cmd = cmd,
             init_options = {
                 workspaceFolders = workspaces,
+                settings = {
+                    java = {
+                        -- Disable expensive features for large codebases
+                        codeGeneration = {
+                            hashCodeEquals = { useJava7Objects = true },
+                            useBlocks = true,
+                        },
+                        completion = {
+                            maxResults = 50,
+                            enabled = true,
+                        },
+                        -- Reduce indexing overhead
+                        maxConcurrentBuilds = 1,
+                        -- Optimize imports and formatting
+                        saveActions = {
+                            organizeImports = false,
+                        },
+                        -- Reduce semantic highlighting load
+                        semanticHighlighting = { enabled = false },
+                        -- Limit references search
+                        references = { includeDecompiledSources = false },
+                        -- Disable expensive validations
+                        validate = { enabled = false },
+                    },
+                },
             },
             root_dir = root_dir,
         }
