@@ -27,8 +27,8 @@ return {
                 "-data",
                 opts.jdtls_workspace_dir(project_name),
                 -- Memory optimization
-                "-Xms2g",
-                "-Xmx8g",
+                "-Xms8g",
+                "-Xmx32g",
                 "-XX:+UseG1GC",
                 "-XX:+UseStringDeduplication",
             })
