@@ -5,10 +5,11 @@ return {
         input = { enabled = true },
         image = { enabled = false },
         notifier = { enabled = true },
-        scope = { enabled = true },
+        scope = { enabled = false },
         scroll = { enabled = false },
         statuscolumn = { enabled = false }, -- we set this in options.lua
         toggle = { map = LazyVim.safe_keymap_set },
+        win = { enabled = false },
         words = { enabled = true },
     },
 }
