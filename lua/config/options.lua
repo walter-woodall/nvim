@@ -8,12 +8,20 @@ vim.opt.shiftwidth = 4
 
 vim.opt.scrolloff = 8
 
-vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+-- vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 vim.opt.textwidth = 120
-vim.opt.wrap = true
+vim.opt.wrap = false
 
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
 
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.foldenable = false
+vim.opt.foldmethod = "manual"
+vim.opt.foldlevelstart = 99
+
 vim.g.snacks_animate = false
+vim.g.tinted_background_transparent = 1
 
